@@ -13,10 +13,9 @@ public class Main {
             masiv1[masiv.length - i - 1] = masiv[i];
         }
         String palindrom1 = new String(masiv1);
-        if (palindrom.equals(palindrom1)){
+        if (palindrom.equals(palindrom1)) {
             System.out.println("Палиндром");
-        }
-        else {
+        } else {
             System.out.println("Обычное слово");
         }
     }
