@@ -5,14 +5,16 @@ public class Employee {
     private int department;
     private int salary;
     private int id;
+    private static int count = 0;
 
-    public Employee(String firstName, String lastName, String surName, int department, int salary, int id) {
+    public Employee(String firstName, String lastName, String surName, int department, int salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.surName = surName;
         this.department = department;
         this.salary = salary;
-        this.id = id;
+        id = count;
+        ++count;
 
     }
 
