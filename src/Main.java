@@ -2,21 +2,17 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 
 public class Main {
     static Scanner in = new Scanner(System.in);
     static Random random = new Random();
 
     public static void main(String[] args) {
-
-
+        // массив сотрудников
         Employee[] array = new Employee[10];
         for (int i = 0; i < 10; i++) {
             int dep = random.nextInt(1, 6);
             array[i] = new Employee("name", "Жульнице", "Андреевич", dep, 22000);
-
         }
         menu(array);
     }
@@ -51,7 +47,7 @@ public class Main {
                 maxSalary(array);
             }
             if (number == 5) {
-                srSalary(array);
+                averageSalary(array);
             }
             if (number == 6) {
                 fioAllPeople(array);
@@ -91,7 +87,7 @@ public class Main {
         System.out.println(max);
     }
 
-    public static void srSalary(Employee[] array) {
+    public static void averageSalary(Employee[] array) {
         int sum = 0;
         for (int i = 0; i < 10; i++) {
             sum = sum + array[i].getSalary();
